@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp.workcenter_line_gantt_production_customization" model="ir.ui.view">
+        <field name="name">mrp.workcenter_line_gantt_production_customization</field>
+        <field name="model">mrp.workorder</field>
+        <field name="type">gantt</field>
+        <field name="inherit_id" ref="mrp.workcenter_line_gantt_production_customization"/>
+        <field type="xml" name="arch">
+            <xpath expr="//gantt/field[@name='date_planned_started']" position="replace">
+                <field name="product_id"/>
+            </xpath>
+            <xpath expr="//gantt/field[@name='state']" position="replace"/>
+            <xpath expr="//gantt/field[@name='workcenter_id']" position="replace"/>
+            <xpath expr="/gantt" position="attributes">
+                <attribute name="width">750</attribute>
+            </xpath>
+        </field>
+    </record>
+</odoo>
