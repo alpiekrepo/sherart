@@ -6,11 +6,18 @@
         <field name="type">gantt</field>
         <field name="inherit_id" ref="mrp.workcenter_line_gantt_production"/>
         <field type="xml" name="arch">
-            <xpath expr="//field[@name='date_planned_started']" position="replace">
-                <field name="product_id"/>
+            <xpath expr="//field[@name='date_planned_started']" position="attributes">
+                <attribute name="attrs">"{'invisible': 'True'}"</attribute>
             </xpath>
-            <xpath expr="//gantt/field[@name='state']" position="replace"/>
-            <xpath expr="//gantt/field[@name='workcenter_id']" position="replace"/>
+            <xpath expr="/field[@name='state']" position="attributes">
+                <attribute name="attrs">"{'invisible': 'True'}"</attribute>
+            </xpath>
+            <xpath expr="//field[@name='workcenter_id']" position="attributes">
+                <attribute name="attrs">"{'invisible': 'True'}"</attribute>
+            </xpath>
+            <xpath expr="//field[@name='workcenter_id']" position="after">
+                <field name='product_id'/>
+            </xpath>
             <xpath expr="/gantt" position="attributes">
                 <attribute name="width">750</attribute>
             </xpath>
