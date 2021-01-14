@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <record id="mrp.workcenter_line_gantt_production_customization" model="ir.ui.view">
+    <record id="workcenter_line_gantt_production_customization" model="ir.ui.view">
         <field name="name">mrp.production.work.order.gantt.production_customization</field>
         <field name="model">mrp.workorder</field>
         <field name="type">gantt</field>
