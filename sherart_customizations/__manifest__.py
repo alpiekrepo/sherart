@@ -14,11 +14,6 @@
         'views/mrp_overview.xml',
     ],
     'qweb': [
-        'contacts',
-        'delivery',
-        'product',
-        'static/src/xml/mrp_mps.xml',
-        'static/src/xml/sync_data_button.xml',
     ],
     'application': False,
     'license': u'OPL-1',
