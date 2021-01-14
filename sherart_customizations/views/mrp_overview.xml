@@ -4,7 +4,7 @@
         <field name="name">mrp.production.work.order.gantt.production_customization</field>
         <field name="model">mrp.workorder</field>
         <field name="type">gantt</field>
-        <field name="inherit_id" ref="mrp.workcenter_line_gantt_production_customization"/>
+        <field name="inherit_id" ref="mrp.workcenter_line_gantt_production"/>
         <field type="xml" name="arch">
             <xpath expr="//gantt/field[@name='date_planned_started']" position="replace">
                 <field name="product_id"/>
